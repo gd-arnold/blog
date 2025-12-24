@@ -1,0 +1,40 @@
+/* Place custom css here */
+/* Base styles */
+.header-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pfp-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.site-pfp {
+    height: 4rem;
+    width: auto;
+    min-width: 2rem; /* Prevents logo from becoming too small */
+    object-fit: contain;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    white-space: nowrap; /* Prevents title from breaking into multiple lines */
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+    .pfp-container {
+        gap: 0.25rem;
+    }
+
+    .site-pfp {
+        height: 2.9rem;
+        min-width: 1.8rem;
+    }
+
+    .site-title {
+        font-size: 1.9rem;
+    }
+}

@@ -1,0 +1,18 @@
+{{/* Header */}}
+
+<div class="header">
+    {{ if or (not (.Param "hideHeader")) .IsHome }}
+    <h1 class="header-title">
+        <a href="{{ site.BaseURL }}" class="header-link">
+            <div class="pfp-container">
+                <img 
+                    src="{{ "/images/pfp-tf.png" }}" 
+                    alt="{{ site.Title }}" 
+                    class="site-pfp"
+                >
+                <span class="site-title">{{ site.Title }}</span>
+            </div>
+        </a>
+    </h1>
+    {{ end }}
+</div>

@@ -1,0 +1,40 @@
+baseURL = 'https://garnaudov.com/'
+languageCode = 'en-us'
+title = 'Georgi Arnaudov'
+theme = 'typo'
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = "Georgi Arnaudov's personal website"
+
+# Appearance settings
+theme = 'dark'
+colorPalette = 'gruvebox'
+hideHeader = false
+footerContent = '-'
+
+# Intro on main page, content is markdown
+homeIntroTitle = ''
+homeIntroContent = """
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Writings'
+homeCollection = 'writings'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
