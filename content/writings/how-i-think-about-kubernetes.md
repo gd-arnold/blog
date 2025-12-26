@@ -11,7 +11,7 @@ hidePagination: true
 
 Kubernetes is most often described as a container orchestration tool, but after you’ve spent some time with it, that mental model doesn’t always feel like the most useful way to think about what’s happening.
 
-In many cases for me Kubernetes feels less like an orchestrator and more like a platform where you declare the desired state of your infrastructure and let the system continuously work to match your intent.
+In many cases for me Kubernetes feels less like an orchestrator and more like a platform where you declare the **desired state** of your infrastructure and let the system **continuously** work to match your **intent**.
 
 That’s why I like to think of Kubernetes as a **runtime for declarative infrastructure with a type system**. Let me break it down.
 
@@ -59,8 +59,8 @@ kubectl apply -f pod.yaml
 Kubernetes doesn’t execute your YAML the way a script runs. What happens is you submit a typed declaration to a runtime and that runtime **continuously** works to make the infrastructure match your **intent**.
 
 - The API server accepts your object. It parses the request, checks that the object is valid, applies admission and policy rules and then stores it as part of cluster's state.
-- The cluster now “remembers” your intent. That object becomes durable state. It’s not a command that ran it’s a thing that exists (until you modify or delete it).
-- Controllers continuously reconcile. Controllers watch for relevant objects and react to changes. They compare desired state (what you declared) with actual state (what exists right now) and take actions to reduce the difference.
+- The cluster now "remembers" your intent. That object becomes **durable state**. It’s not a command that ran it’s a thing that exists (until you modify or delete it).
+- Controllers continuously **reconcile**. Controllers watch for relevant objects and react to changes. They compare desired state (what you declared) with actual state (what exists right now) and take actions to reduce the difference.
 - In our case, the scheduler picks a node to place the **Pod** on.
 - The kubelet makes it real on the node. The node agent turns “a **Pod** should exist here” into “containers are actually running here”.
 
@@ -103,7 +103,7 @@ Which leads to a really practical rule of thumb. If something is GitOps managed,
 
 ---
 
-Thinking of Kubernetes as a **runtime for declarative infrastructure** instead of a mere orchestrator results in very practical approaches to operate your cluster:
+Thinking of Kubernetes as a **runtime for declarative infrastructure** instead of a mere orchestrator results in very practical approaches to operate your cluster.
 - change the desired state, not the symptoms
 - let reconciliation do the work
 - make ownership explicit (especially with GitOps)
